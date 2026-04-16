@@ -1,0 +1,70 @@
+
+/* -------------------------------------------------------
+   GENERIC SECTION LAYOUT
+------------------------------------------------------- */
+
+.section {
+    text-align: center;
+    padding: var(--space-xl) var(--space-s);
+  }
+  
+  .section-title {
+    font-family: var(--font-title);
+    font-size: var(--fs-section-title);
+    color: var(--gold);
+    margin-bottom: var(--space-m);
+  }
+  
+  .section-paragraph {
+    font-size: var(--fs-body-large);
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  /* -------------------------------------------------------
+     FOOTER 
+  ------------------------------------------------------- */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-m) var(--space-s);
+    font-size: 1.1rem;
+    background: var(--black);
+    color: var(--font-body);
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+
+  /* -------------------------------------------------------
+   MEDIA QUERIES
+------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    .conflict {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .player {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .player .section-text {
+      order: 1;
+    }
+  
+    .player .section-image {
+      order: 2;
+    }
+  }

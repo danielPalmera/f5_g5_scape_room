@@ -1,0 +1,69 @@
+/* -------------------------------------------------------
+   VARIABLES
+------------------------------------------------------- */
+:root {
+  /* Colors */
+  --gold: #c0a666;
+  --gold-strong: #b78402;
+  --gold-light: #e4a300;
+
+  --lavender: #f0eaff;
+  --lavender-strong: #e4ccff;
+
+  --black: #0b0c11;
+  --white: #ffffff;
+
+  --muted: rgba(0, 0, 0, 0.2);
+  --shadow-gold: 0 0 40px rgba(240, 208, 128, 0.5),
+    0 0 80px rgba(201, 168, 76, 0.3), 4px 4px 0px rgba(107, 47, 160, 0.6);
+
+  /* Fonts */
+  --font-title: "Cinzel Decorative", serif;
+  --font-body: "Lato", sans-serif;
+
+  /* Font sizes */
+  --fs-hero-title: 96px;
+  --fs-section-title: 64px;
+  --fs-button: 24px;
+  --fs-body-large: 32px;
+  --fs-subtitle: 24px;
+
+  /* Spacing */
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 6rem;
+
+  /* Layout */
+  --max-width: 1200px;
+}
+
+/* -------------------------------------------------------
+   BASE STYLES
+------------------------------------------------------- */
+
+body {
+  font-family: var(--font-body);
+  background: url("/assets/img/gray-bg.png") no-repeat top center / cover;
+  background-size: cover;
+  color: var(--lavender);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-s);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
