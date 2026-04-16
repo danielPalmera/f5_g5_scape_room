@@ -36,4 +36,23 @@
     /* Layout */
     --max-width: 1200px;
   }
+
+  /* -------------------------------------------------------
+   BASE STYLES
+------------------------------------------------------- */
+
+body{
+    font-family: var(--font-body);
+    background: url('/assets/img/gray-bg.png') no-repeat top center / cover;
+    background-size: cover;
+    color: var(--lavender);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-s);
+}
   
