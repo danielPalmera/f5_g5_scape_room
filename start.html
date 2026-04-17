@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/css/internal.css">
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/start.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
@@ -31,12 +32,18 @@
   
     <main class="start-content">
       <div class="start-hero">
-        <img src="/assets/img/entrada.jpg" class="start-illustration" alt="Entrada al laberinto" />
+        <!--<img src="/assets/img/entrada.jpg" class="start-illustration" alt="Entrada al laberinto" />-->
     
-        <div class="start-card">
-          <p>
+        <div class="start-card" id="message-container">
+          <p id="message-1">
             En este umbral, el aire cambia… y lo que sabes deja de servirte.
             Cruza si estás lista para ver lo que otros no ven.
+            <a href="#" id="btn_1" class="btn-outline">Conoce la historia</a>
+          </p>
+          <p id="message-2">
+            En este umbral, el aire cambia… y lo que sabes deja de servirte.
+            Cruza si estás lista para ver lo que otros no ven.
+            <a href="#" id="btn_2" class="btn-outline">Conoce la historia</a>
           </p>
         </div>
       </div>
@@ -58,6 +65,21 @@
       <div class="footer-right">Todos los derechos reservados | 2026</div>
     </footer>
 
-    <script src="/assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script>
+      function hideShowMessage(id){
+        let actual
+        let siguiente
+        if(id!='ultimo_mensaje'){
+          actual = document.getElementById(id).parentNode;
+          actual.hide
+          console.log(actual.id)
+          /*siguiente=actual.nextSibling*/
+        }
+      }
+      document.getElementById("btn_1").addEventListener("click",(e)=>{
+          hideShowMessage(e.currentTarget.id)
+      })
+    </script>
   </body>
 </html>

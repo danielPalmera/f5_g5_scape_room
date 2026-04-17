@@ -11,8 +11,7 @@
   --lavender-strong: #e4ccff;
 
   --black: #0b0c11;
-  --white: #ffffff;
-
+  --white: whitesmoke;
   --muted: rgba(0, 0, 0, 0.2);
   --shadow-gold: 0 0 40px rgba(240, 208, 128, 0.5),
     0 0 80px rgba(201, 168, 76, 0.3), 4px 4px 0px rgba(107, 47, 160, 0.6);
