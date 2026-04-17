@@ -28,7 +28,6 @@ All design decisions, technical notes, and detailed documentation are available 
 ```
 
 # Open index.html in your browser
-```
 
 ## Features
 
