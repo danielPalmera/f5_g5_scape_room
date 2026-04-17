@@ -5,14 +5,12 @@
 ------------------------------------------------------- */
 
 .internal-title {
-    color: #F0D080;
-    font-size: 2rem;
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    word-wrap: break-word;
-    text-shadow: 5px 5px 0px rgba(255, 184, 7, 0.25);
-    text-align: center;
-    margin: 0 auto var(--space-l);
-    text-transform: uppercase;
-  }
-  
+   color: #F0D080;
+   font-size: 4rem;
+   font-family: "Cinzel Decorative", serif;
+   font-weight: 700;
+   word-wrap: break-word;
+   text-shadow: 5px 5px 0px rgba(255, 184, 7, 0.25);
+   text-align: center;
+   text-transform: uppercase;
+}

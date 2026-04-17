@@ -15,16 +15,17 @@
 
 /* Contenedor que permite la superposición */
 .start-hero {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     width: 100%;
     height: 100vh;
     /*max-width: 1200px;*/
     margin: 0 auto;
     background: url(/assets/img/entrada.jpg) center center / cover no-repeat;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
   
   /* Imagen central */
@@ -38,12 +39,14 @@
     max-width: 600px;
     background: rgba(202, 168, 116, 0.9); /* dorado con transparencia */
     padding: 1rem;
-    margin-bottom: 250px;
     border-radius: 15px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
   }
   
-  .start-card p {
+  .start-card p{
     font-size: 24px;
     font-family: Lato, sans-serif;
     color: var(--black);
@@ -59,5 +62,60 @@
     color: var(--white);
   }
 
+  .internal-title{
+    filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
+  }
 
+  .start-logo {
+    /* Sintaxis: drop-shadow(parámetro-X parámetro-Y desenfoque color) */
+    filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
+    
+    /* Si quieres un resplandor (glow) en lugar de sombra: */
+    /* filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8)); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px; /* Optional spacing */
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+  }
+  .show{
+    display: flex;
+    flex-direction: column;
+  }
+  .hide{
+    display: none;
+  }
 
+  @keyframes zoomIn {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-zoom {
+    transform: scale(0);
+    opacity: 0;
+    animation: zoomIn 1s forwards;
+  }
+
+  @keyframes zoomOut {
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  .animate-zoom-out {
+    transform: scale(1);
+    opacity: 1;
+    animation: zoomOut 1s forwards;
+  }
+
+  .btn-start{
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: auto;
+  }

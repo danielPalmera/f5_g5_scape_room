@@ -25,31 +25,26 @@
 
   <body class="start-page">
     <!-- HEADER  -->
-    <header class="start-header">
-      <img src="/assets/img/icons/dungeon.svg" class="start-logo" alt="Logo" />
-      <h1 class="internal-title">Entrada al<br>Laberinto</h1>
-    </header>
-  
     <main class="start-content">
-      <div class="start-hero">
-        <!--<img src="/assets/img/entrada.jpg" class="start-illustration" alt="Entrada al laberinto" />-->
-    
-        <div class="start-card" id="message-container">
+      <div id="body" class="start-hero">
+        <img src="/assets/img/icons/dungeon.svg" class="start-logo" id="logo" alt="Logo" />
+        <h1 class="internal-title hide" id="dungeon-name">Entrada al<br>Laberinto</h1>
+        <div class="start-card hide" id="message-container">
           <p id="message-1">
-            En este umbral, el aire cambia… y lo que sabes deja de servirte.
-            Cruza si estás lista para ver lo que otros no ven.
-            <a href="#" id="btn_1" class="btn-outline">Conoce la historia</a>
+            Una voz profunda y enigmática te dice
+            <a href="#" id="btn_1" class="btn-start">Continuar</a>
           </p>
-          <p id="message-2">
-            En este umbral, el aire cambia… y lo que sabes deja de servirte.
-            Cruza si estás lista para ver lo que otros no ven.
-            <a href="#" id="btn_2" class="btn-outline">Conoce la historia</a>
+          <p id="message-2" class="hide">
+            Te reconozco, Narrador...<br> caminas sobre piedras que el olvido aún no ha podido morder.
+            <a href="#" id="btn_2" class="btn-start">Continuar</a>
+          </p>
+          <p id="message-3" class="hide">
+            Entra si te atreves, pero recuerda: en este Laberinto, lo que dejas de imaginar, deja de existir."
+            <a href="#" id="btn_3" class="btn-start">Continuar</a>
           </p>
         </div>
       </div>
     </main>
-    
-
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-left">
@@ -64,22 +59,53 @@
 
       <div class="footer-right">Todos los derechos reservados | 2026</div>
     </footer>
-
-    <script src="assets/js/scripts.js"></script>
     <script>
+      /**
+       * animacion de entrada
+      */
+      const title = document.getElementById("dungeon-name");
+      title.classList.replace("hide", "show");
+      title.classList.add("animate-zoom"); 
+      setTimeout(()=> {
+        title.classList.replace("animate-zoom", "animate-zoom-out");
+        setTimeout(()=> {
+          title.classList.replace("show", "hide");
+          setTimeout(()=> {
+            document.getElementById("message-container").classList.replace("hide", "show");
+            document.getElementById("message-container").classList.add("animate-zoom");
+          }, 2000);
+        }, 2000);
+      }, 2000);
+      /**
+       * funcion de mostrar ocultar
+      */
+
       function hideShowMessage(id){
-        let actual
-        let siguiente
-        if(id!='ultimo_mensaje'){
-          actual = document.getElementById(id).parentNode;
-          actual.hide
-          console.log(actual.id)
-          /*siguiente=actual.nextSibling*/
+        if(id=="paso1"){
+          document.getElementById("message-1").classList.add("hide")
+          document.getElementById("message-2").classList.replace("hide", "show");
+          document.getElementById("message-2").classList.add("animate-zoom")
+        }else if(id=="paso2"){
+          document.getElementById("message-2").classList.replace("show","hide");
+          document.getElementById("message-2").classList.add("animate-zoom")
+          document.getElementById("message-3").classList.replace("hide", "show");
+          document.getElementById("message-3").classList.add("animate-zoom")
+        }else{
+          
         }
       }
+      /**
+       * Seccion de los eventListener
+      */
       document.getElementById("btn_1").addEventListener("click",(e)=>{
-          hideShowMessage(e.currentTarget.id)
+          hideShowMessage("paso1")
       })
+
+      document.getElementById("btn_2").addEventListener("click",(e)=>{
+          hideShowMessage("paso2")
+      })
+
+      
     </script>
   </body>
 </html>
