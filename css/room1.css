@@ -33,8 +33,6 @@ content: url(/assets/img/room_1/off.png);
     align-items: center;
     width: 33.33%; /* Ensure 3 columns */
     height: 33.33%; /* Ensure 3 rows */
-    border: 1px solid #000; /* Optional: for visual clarity */
-    box-sizing: border-box;
 }
 .btn_img{
     cursor: pointer;

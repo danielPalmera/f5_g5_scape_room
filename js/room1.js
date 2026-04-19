@@ -47,7 +47,7 @@
     }
 
     function cerraduraClick(){
-        if(llave!=2){
+        if(llave!==2){
         nollave.classList.replace("hide","show")
         setTimeout(()=> {
             nollave.classList.replace("show","hide")
