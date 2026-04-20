@@ -2,11 +2,7 @@
   body{
     background:unset
   }
-  
-  .start-page {
-    /* background: url(/assets/img/bg-purple-texture.png) no-repeat top center / cover;*/
-  }
-  
+
   /* Header exclusivo de la página start */
   .start-header {
     display: flex;
