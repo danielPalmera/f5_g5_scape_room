@@ -5,13 +5,33 @@
 ------------------------------------------------------- */
 
 .internal-title {
-   color: #F0D080;
-   font-size: 3rem;
-   font-family: "Cinzel Decorative", serif;
-   font-weight: 700;
-   word-wrap: break-word;
-   text-shadow: 5px 5px 0px rgba(255, 184, 7, 0.25);
-   text-align: center;
-   text-transform: uppercase;
-   filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
-}
+    color: #F0D080;
+    font-size: 1.8rem;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 3px 3px 0px rgba(255, 184, 7, 0.25);
+    text-align: center;
+    text-transform: uppercase;
+    filter: drop-shadow(6px 6px 8px rgba(255, 255, 255, 0.8));
+    line-height: 1.1;
+ }
+ 
+ /* iPad */
+ @media (min-width: 768px) and (max-width: 1023px) {
+    .internal-title {
+       font-size: 2.4rem;
+       text-shadow: 4px 4px 0px rgba(255, 184, 7, 0.25);
+       filter: drop-shadow(12px 12px 12px rgba(255, 255, 255, 0.9));
+    }
+ }
+ 
+ /* Desktop */
+ @media (min-width: 1024px) {
+    .internal-title {
+       font-size: 2.8rem;
+       text-shadow: 5px 5px 0px rgba(255, 184, 7, 0.25);
+       filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
+    }
+ }
+ 

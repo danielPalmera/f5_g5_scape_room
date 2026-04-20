@@ -1,106 +1,130 @@
 .light{
-    background: url(/assets/img/room_1/salon_1_claro.jpg) center center / cover no-repeat;
+  background: url(/assets/img/room_1/salon_1_claro.jpg) center center / cover no-repeat;
 }
 
 .dark{
-    background: url(/assets/img/room_1/salon_1_oscuro.jpg) center center / cover no-repeat;
+  background: url(/assets/img/room_1/salon_1_oscuro.jpg) center center / cover no-repeat;
 }
 
 .cristalOn{
-    content: url(/assets/img/room_1/on.png);
+  content: url(/assets/img/room_1/on.png);
 }
 .cristalOff{
-content: url(/assets/img/room_1/off.png);
+  content: url(/assets/img/room_1/off.png);
 }
 
 .start-card{
-    background: unset;
+  background: unset;
 }
 
 .room1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
 }
 
 .room1 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.33%; /* Ensure 3 columns */
-    height: 33.33%; /* Ensure 3 rows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  padding: 1rem 0;
 }
+
 .btn_img{
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
 }
-.room1 div:nth-child(1) {
-    
-  }
 
-  .room1 div:nth-child(2) {
-    
-  }
+#contenedor-mensajes {
+  text-align: center;
+  margin: 0 auto;
+}
 
-  .room1 div:nth-child(3) {
-    
-  }
 
-  .room1 div:nth-child(4) {
-    
-  }
 
-  .room1 div:nth-child(5) {
-    
-  }
-
-  .room1 div:nth-child(6) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .room1 div:nth-child(7) {
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .room1 div:nth-child(8) {
-    
-  }
-
-  .room1 div:nth-child(9) {
-    
-  }
+/* .room1 div:nth-child(1) {
   
-.izquierda{
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
 }
+
+.room1 div:nth-child(2) {
+  
+}
+
+.room1 div:nth-child(3) {
+  
+}
+
+.room1 div:nth-child(4) {
+  
+}
+ */
+
+.room1 div:nth-child(5) {
+  width: 90%;
+}
+
+.room1 div:nth-child(6) {
+  display: flex;
+  flex-direction: column;
+}
+
+.room1 div:nth-child(7) {
+  display: flex;
+  align-items: flex-end;
+}
+
+/*   .room1 div:nth-child(8) {
+  
+}
+
+.room1 div:nth-child(9) {
+  
+} */
+
+.izquierda{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
 #contenedor-mensajes{
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 body.cursor-key1,
 body.cursor-key1 * {
-    cursor: url('/assets/img/room_1/llave_1_128.png'), auto !important;
-  }
+  cursor: url('/assets/img/room_1/llave_1_128.png'), auto !important;
+}
 
 body.cursor-key2,
 body.cursor-key2 * {
-    cursor: url('/assets/img/room_1/llave_2_128.png'), auto !important;
-  }
+  cursor: url('/assets/img/room_1/llave_2_128.png'), auto !important;
+}
 
 body.cursor-key3,
 body.cursor-key3 * {
-    cursor: url('/assets/img/room_1/llave_3_128.png'), auto !important;
-  }
+  cursor: url('/assets/img/room_1/llave_3_128.png'), auto !important;
+}
 
-  .cursor-default {
-    cursor: default;
+.cursor-default {
+  cursor: default;
+}
+
+@media (min-width: 1024px) {
+
+  .room1{
+      width: 60%;
+      height: 100%;
+      padding: 0;
   }
+}
