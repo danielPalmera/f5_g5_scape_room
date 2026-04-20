@@ -28,8 +28,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1rem;
     padding: var(--space-m) var(--space-s);
-    font-size: 1.1rem;
     background: var(--black);
     color: var(--font-body);
   }
@@ -44,6 +44,12 @@
     width: 40px;
     height: 40px;
   }
+
+  .footer img {
+    width: clamp(18px, 12px + 2vw, 28px);
+    height: auto;
+}
+
   
   
 
