@@ -64,7 +64,7 @@
         });
         setTimeout(()=> {
             sillave.classList.replace("show","hide")
-            window.location.href = "success.html";
+            window.location.href = "room2.html"; 
         },2000);
         
         }
