@@ -5,13 +5,14 @@
 ------------------------------------------------------- */
 
 .internal-title {
-   color: #F0D080;
-   font-size: 3rem;
-   font-family: "Cinzel Decorative", serif;
-   font-weight: 700;
-   word-wrap: break-word;
-   text-shadow: 5px 5px 0px rgba(255, 184, 7, 0.25);
-   text-align: center;
-   text-transform: uppercase;
-   filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
+    color: #F0D080;
+    font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.8rem);
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    text-shadow: 3px 3px 0px rgba(255, 184, 7, 0.25);
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    filter: drop-shadow(6px 6px 8px rgba(255, 255, 255, 0.8));
+    line-height: 1.1;
 }

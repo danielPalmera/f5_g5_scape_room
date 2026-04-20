@@ -1,44 +1,47 @@
-.light{
-    background: url(/assets/img/room_1/salon_1_claro.jpg) center center / cover no-repeat;
+.light {
+  background: url(/assets/img/room_1/salon_1_claro.jpg) center center / cover
+    no-repeat;
 }
 
-.dark{
-    background: url(/assets/img/room_1/salon_1_oscuro.jpg) center center / cover no-repeat;
+.dark {
+  background: url(/assets/img/room_1/salon_1_oscuro.jpg) center center / cover
+    no-repeat;
 }
 
-.cristalOn{
-    content: url(/assets/img/room_1/on.png);
+.cristalOn {
+  content: url(/assets/img/room_1/on.png);
 }
-.cristalOff{
-content: url(/assets/img/room_1/off.png);
-}
-
-.start-card{
-    background: unset;
+.cristalOff {
+  content: url(/assets/img/room_1/off.png);
 }
 
-.room1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 100%;
+.start-card {
+  background: unset;
+}
+
+.room1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
 }
 
 .room1 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.33%; /* Ensure 3 columns */
-    height: 33.33%; /* Ensure 3 rows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%; /* Ensure 3 columns */
+  height: 33.33%; /* Ensure 3 rows */
 }
-.btn_img{
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
+.btn_img {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
 }
-.room1 div:nth-child(1) {
+
+/* .room1 div:nth-child(1) {
     
   }
 
@@ -56,51 +59,53 @@ content: url(/assets/img/room_1/off.png);
 
   .room1 div:nth-child(5) {
     
-  }
+  } */
 
-  .room1 div:nth-child(6) {
-    display: flex;
-    flex-direction: column;
-  }
+.room1 div:nth-child(6) {
+  display: flex;
+  flex-direction: column;
+}
 
-  .room1 div:nth-child(7) {
-    display: flex;
-    align-items: flex-end;
-  }
+.room1 div:nth-child(7) {
+  display: flex;
+  align-items: flex-end;
+}
 
-  .room1 div:nth-child(8) {
+/*   .room1 div:nth-child(8) {
     
   }
 
   .room1 div:nth-child(9) {
     
-  }
-  
-.izquierda{
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
+  } */
+
+.izquierda {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
-#contenedor-mensajes{
-    display: block;
-    text-align: center;
+
+.hero-subtitle {
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.6rem);
+  text-align: center;
 }
+
 
 body.cursor-key1,
 body.cursor-key1 * {
-    cursor: url('/assets/img/room_1/llave_1_128.png'), auto !important;
-  }
+  cursor: url("/assets/img/room_1/llave_1_128.png"), auto !important;
+}
 
 body.cursor-key2,
 body.cursor-key2 * {
-    cursor: url('/assets/img/room_1/llave_2_128.png'), auto !important;
-  }
+  cursor: url("/assets/img/room_1/llave_2_128.png"), auto !important;
+}
 
 body.cursor-key3,
 body.cursor-key3 * {
-    cursor: url('/assets/img/room_1/llave_3_128.png'), auto !important;
-  }
+  cursor: url("/assets/img/room_1/llave_3_128.png"), auto !important;
+}
 
-  .cursor-default {
-    cursor: default;
-  }
+.cursor-default {
+  cursor: default;
+}
