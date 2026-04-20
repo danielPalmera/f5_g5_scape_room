@@ -14,7 +14,7 @@
   }
   
   .header-logo {
-    width: 75px;
+    width: clamp(80px, 50px + 5vw, 140px);
     height: auto;
   }
   

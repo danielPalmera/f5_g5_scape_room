@@ -65,14 +65,13 @@
   .start-logo {
     /* Sintaxis: drop-shadow(parámetro-X parámetro-Y desenfoque color) */
     filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
-    
     /* Si quieres un resplandor (glow) en lugar de sombra: */
     /* filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8)); */
     position: absolute;
     top: 0;
     left: 0;
     margin: 20px; /* Optional spacing */
-    width: auto; /* Adjust as needed */
+    width: clamp(80px, 50px + 5vw, 90px);
     height: auto; /* Adjust as needed */
   }
   .show{
