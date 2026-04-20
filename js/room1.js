@@ -17,6 +17,8 @@
     const cerradura = document.getElementById("cerradura")
     const title = document.getElementById("dungeon-name");
 
+    const sonidoPuerta = new Audio("../assets/sound/dragon-studio-door-opening-454242.mp3");
+
     let llave=0;
     /**
      * Functiones
@@ -54,6 +56,12 @@
         },2000);
         }else{
         sillave.classList.replace("hide","show")
+        sonidoPuerta.currentTime = 0; 
+    
+        // Reproducimos
+        sonidoPuerta.play().catch(error => {
+            console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
+        });
         setTimeout(()=> {
             sillave.classList.replace("show","hide")
             window.location.href = "success.html";
@@ -117,3 +125,4 @@
  *  iniciar 
  */
     iniciar()
+    document.getElementById('bg-audio').volume = 0.1;
