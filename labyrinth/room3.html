@@ -5,61 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EL LABERINTO</title>
 
-    <meta name="description" content="Escape Room - A thrilling adventure game." />
+    <meta
+      name="description"
+      content="Escape Room - A thrilling adventure game."
+    />
     <meta name="keywords" content="Escape Room, Adventure, Puzzle, Game" />
     <meta name="author" content="Your Name" />
 
     <link rel="icon" href="assets/img/icons/dungeon.svg" type="image/svg+xml" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/internal.css">
+    <link rel="stylesheet" href="/css/internal.css" />
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/start.css" />
-    <link rel="stylesheet" href="/css/room3.css" />
+    <link rel="stylesheet" href="/css/room2.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
 
   <body class="start-page">
-    <!-- HEADER  -->
+    <audio id="bg-audio" autoplay loop></audio>
+
+    <!-- MAIN -->
     <main class="start-content">
       <div id="body" class="start-hero">
-        <a href="failure.html"><img src="/assets/img/icons/dungeon.svg" class="start-logo" id="logo" alt="Logo" /></a>
-        <h1 class="internal-title hide" id="dungeon-name">EL ACERTIJO<br>DEL GOLEM</h1>
-        <div class="start-card hide" id="message-container">
-          <p id="message-1">
-            Una voz profunda y enigmática te dice
-            <a href="#" id="btn_1" class="btn-start">Continuar</a>
-          </p>
-          <p id="message-2" class="hide">
-            Te reconozco, Narrador...<br> caminas sobre piedras que el olvido aún no ha podido morder.
-            <a href="#" id="btn_2" class="btn-start">Continuar</a>
-          </p>
-          <p id="message-3" class="hide">
-            Entra si te atreves, pero recuerda: en este Laberinto, lo que dejas de imaginar, deja de existir."
-            <a href="#" id="btn_3" class="btn-start">Continuar</a>
-          </p>
+
+        <!-- LOGO -->
+        <a href="failure.html">
+          <img
+            src="/assets/img/icons/dungeon.svg"
+            class="start-logo"
+            id="logo"
+            alt="Logo"
+          />
+        </a>
+
+        <!-- TÍTULO -->
+        <h1 class="internal-title hide" id="dungeon-name">
+          El acertijo<br />
+          del golem
+        </h1>
+
+        <!-- MENSAJES -->
+        <div id="reacciones" class="hide">
+          <p class="hero-subtitle" id="mensaje"></p>
         </div>
+
+        <!-- GOLEM -->
+        <div id="contenedorCaras">
+          <button id="face_1" class="btn_img">
+            <img src="/assets/img/room_3/golem.png" />
+          </button>
+        </div>
+
+        <!-- BOTONES DEL ACERTIJO (RESPUESTAS) -->
+        <div id="acciones" class="hide">
+          <div class="acciones">
+            <button class="btn-start" id="accion_1"></button>
+            <button class="btn-start" id="accion_2"></button>
+            <button class="btn-start" id="accion_3"></button>
+          </div>
+        </div>
+
+        <!-- CONTADOR DE INTENTOS -->
+        <p id="intentos" class="hide intentos-text">Intentos: 3</p>
+
+        <!-- PERGAMINO (INSTRUCCIONES) -->
+        <button class="btn_img hide" id="btn_pergamino">
+          <img src="/assets/img/room_2/pergamino.png" />
+        </button>
+
       </div>
     </main>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-left">
-        <a href="https://github.com/karinalorenzo" target="_blank" class="icon-link">
-          <img src="/assets/img/icons/mdi_github-1.png" alt="GitHub Karina" class="icon" />
+        <a
+          href="https://github.com/karinalorenzo"
+          target="_blank"
+          class="icon-link"
+        >
+          <img
+            src="/assets/img/icons/mdi_github-1.png"
+            alt="GitHub Karina"
+            class="icon"
+          />
         </a>
-
-        <a href="https://github.com/danielPalmera" target="_blank" class="icon-link">
+        <a
+          href="https://github.com/danielPalmera"
+          target="_blank"
+          class="icon-link"
+        >
           <img src="/assets/img/gato.png" alt="GitHub Daniel" class="icon" />
         </a>
       </div>
-
       <div class="footer-right">Todos los derechos reservados | 2026</div>
     </footer>
-    <script src="/js/start.js"></script>
+
+    <!-- SCRIPT DEL RETO -->
+    <script src="/js/room3.js"></script>
   </body>
 </html>
