@@ -71,9 +71,9 @@
             reacciones.classList.add("hide")
         }, 3000)
     }
-    function dejar_descanzar(){
+    function dejar_descansar(){
         setTimeout(()=> {
-            mostrar_mensaje("se escucha a aguien decir dejenme descanzar")
+            mostrar_mensaje("se escucha a alguien decir déjenme descansar")
         }, 2000);
     }
     function mostrar_reacciones(accion){
@@ -123,7 +123,7 @@
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
                 mostrar_mensaje("repite burlonamente lo que dices, y se ríe muy alto")
-                dejar_descanzar()
+                dejar_descansar()
                 
             }else{
                 espera(0)
@@ -133,7 +133,7 @@
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
                 mostrar_mensaje("hey hey ¿qué te pasa?, y se ríe muy alto")
-                dejar_descanzar()
+                dejar_descansar()
             }
         }else{//gritar
             if(accion==1){
@@ -154,7 +154,7 @@
                     mostrar_mensaje("comienza a gritar muy alto, solo malas palabras")
                 }, 1000);
                 
-                dejar_descanzar()
+                dejar_descansar()
             }else{
                 espera(0)
 
@@ -163,7 +163,7 @@
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
                 mostrar_mensaje("Grita muy fuerte de miedo")               
-                dejar_descanzar()
+                dejar_descansar()
             }
         }
         quitar_seleccion()
