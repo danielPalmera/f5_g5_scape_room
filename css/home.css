@@ -186,3 +186,57 @@
     padding-left: var(--space-xl);
   }
 }
+
+/* CSS for entrance animations */
+.animate-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideInLeft 1s forwards;
+}
+
+.animate-right {
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInRight 1s forwards;
+}
+
+.animate-zoom {
+  transform: scale(0);
+  opacity: 0;
+  animation: zoomIn 1s forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-zoom-out {
+  animation: zoomOut 1s forwards;
+}
+
+@keyframes zoomOut {
+  from { transform: scale(1); opacity: 1; }
+  to   { transform: scale(0); opacity: 0; }
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: scale(0);
+}
