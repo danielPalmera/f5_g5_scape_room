@@ -16,6 +16,7 @@
     const btn_key3 = document.getElementById("btn_key3")
     const cerradura = document.getElementById("cerradura")
     const title = document.getElementById("dungeon-name");
+    const sonidoPuerta = new Audio("../assets/sound/door_opening.mp3");
 
     let llave=0;
     /**
