@@ -13,7 +13,7 @@ const accion_3 = document.getElementById("accion_3");
 const reacciones = document.getElementById("reacciones");
 const mensaje_ = document.getElementById("mensaje");
 
-const btn_pergamino = document.getElementById("btn_pergamino");
+//const btn_pergamino = document.getElementById("btn_pergamino");
 const intentosText = document.getElementById("intentos");
 const golemGrowl = new Audio("../assets/sound/golemGrowl.mp3");
 
@@ -95,7 +95,7 @@ function bloquear() {
   contenedorCaras.classList.add("hide");
   acciones.classList.add("hide");
   reacciones.classList.add("hide");
-  btn_pergamino.classList.add("hide");
+  //btn_pergamino.classList.add("hide");
   intentosText.classList.add("hide");
 }
 
@@ -130,7 +130,7 @@ function iniciar() {
       face_1.hidden=false;
       //contenedorCaras.classList.remove("hide");
       face_1.classList.add("animate-golem");
-      btn_pergamino.classList.remove("hide");
+      //btn_pergamino.classList.remove("hide");
 
         golemGrowl.currentTime = 0;
         golemGrowl.play().catch(error => {
@@ -141,15 +141,6 @@ function iniciar() {
 
   }, 3000);
 }
-
-/**
- * INSTRUCCIONES DEL ACERTIJO (pergamino)
- */
-btn_pergamino.addEventListener("click", () => {
-  mostrarMensaje(`Escucha: ${acertijo.pregunta}`);
-  intentosText.classList.remove("hide");
-  actualizarIntentos();
-});
 
 /**
  * MOSTRAR OPCIONES AL PULSAR EL GOLEM
@@ -185,7 +176,7 @@ function evaluarRespuesta(indiceElegido) {
         acertijo = acertijoAleatorio();
         acciones.classList.add("hide");
         contenedorCaras.classList.remove("hide");
-        btn_pergamino.classList.remove("hide");
+        //btn_pergamino.classList.remove("hide");
     }, 2000);
   }
 }
