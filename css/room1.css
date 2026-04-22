@@ -9,6 +9,7 @@
 .cristalOn {
   content: url(/assets/img/room_1/on.png);
 }
+
 .cristalOff {
   content: url(/assets/img/room_1/off.png);
 }
@@ -26,17 +27,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33.33%; /* Ensure 3 columns */
-  height: 33.33%; /* Ensure 3 rows */
+  width: 33.33%;
+  height: 33.33%;
 }
 
 .room1 div:nth-child(6) {
-  display: flex;
   flex-direction: column;
 }
 
 .room1 div:nth-child(7) {
-  display: flex;
   align-items: flex-end;
 }
 
