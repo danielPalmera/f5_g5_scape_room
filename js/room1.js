@@ -16,6 +16,7 @@
     const btn_key3 = document.getElementById("btn_key3")
     const cerradura = document.getElementById("cerradura")
     const title = document.getElementById("dungeon-name");
+    
     const sonidoPuerta = new Audio("../assets/sound/door_opening.mp3");
 
     let llave=0;
@@ -32,6 +33,8 @@
         title.classList.replace("animate-zoom", "animate-zoom-out");
         title.classList.replace("show", "hide");
         document.getElementById("room1").style.height="80vh"
+        
+
         desbloquear()
         onOff.hidden=false
         }, 4000);
@@ -54,9 +57,12 @@
             nollave.classList.replace("show","hide")
         },2000);
         }else{
+            
         sillave.classList.replace("hide","show")
-        sonidoPuerta.currentTime = 0; 
-    
+        onOff.classList.add("hide")
+        onOff.style.hidden=true
+        sonidoPuerta.currentTime = 0
+        
         // Reproducimos
         sonidoPuerta.play().catch(error => {
             console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
