@@ -29,7 +29,7 @@
 
     let llave=0;
     /**
-     * Functiones
+     * Funciones
      */
 
     function iniciar(){
