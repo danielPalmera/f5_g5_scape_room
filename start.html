@@ -4,44 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EL LABERINTO</title>
+
     <meta name="description" content="Escape Room - A thrilling adventure game." />
+
     <link rel="icon" href="assets/img/icons/dungeon.svg" type="image/svg+xml" />
     <link rel="preload" href="/assets/img/entrada.jpg" as="image" />
+
+    <!-- Normalización y tipografías -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS del proyecto -->
     <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/internal.css">
+    <link rel="stylesheet" href="/css/internal.css" />
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/start.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
+
   <body class="start-page">
     <audio id="bg-audio" autoplay loop>
-      <!--<source src="assets/sound/start.ogg" type="audio/ogg"/>-->
+      <!-- <source src="assets/sound/start.ogg" type="audio/ogg" /> -->
     </audio>
-    <!-- HEADER  -->
+
     <main class="start-content">
       <div id="body" class="start-hero">
-        <a href="index.html" target=""><img src="/assets/img/icons/dungeon.svg" class="start-logo" id="logo" alt="Logotipo Dungeon" /></a>
-        <h1 class="internal-title hide" id="dungeon-name">Entrada al<br>Laberinto</h1>
+
+        <!-- LOGO -->
+        <a href="index.html">
+          <img
+            src="/assets/img/icons/dungeon.svg"
+            class="start-logo"
+            id="logo"
+            alt="Logotipo Dungeon"
+          />
+        </a>
+
+        <!-- TÍTULO -->
+        <h1 class="internal-title hide" id="dungeon-name">
+          Entrada al<br>Laberinto
+        </h1>
+
+        <!-- MENSAJES -->
         <div class="start-card hide" id="message-container">
+
           <p id="message-1">
             Una voz profunda y enigmática te dice
             <a href="#" id="btn_1" class="btn-start">Continuar</a>
           </p>
+
           <p id="message-2" class="hide">
-            Te reconozco, Narrador...<br> caminas sobre piedras que el olvido aún no ha podido morder.
+            Te reconozco, Narrador...<br>
+            caminas sobre piedras que el olvido aún no ha podido morder.
             <a href="#" id="btn_2" class="btn-start">Continuar</a>
           </p>
+
           <p id="message-3" class="hide">
-            Entra si te atreves, pero recuerda: en este Laberinto, lo que dejas de imaginar, deja de existir.
+            Entra si te atreves, pero recuerda: en este Laberinto,
+            lo que dejas de imaginar, deja de existir.
             <a href="labyrinth/room1.html" id="btn_3" class="btn-start">Continuar</a>
           </p>
+
         </div>
+
       </div>
     </main>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-left">
@@ -52,8 +82,12 @@
           <img src="/assets/img/gato.png" alt="GitHub Daniel" class="icon" />
         </a>
       </div>
-      <div class="footer-right">Todos los derechos reservados | 2026</div>
+
+      <div class="footer-right">
+        Todos los derechos reservados | 2026
+      </div>
     </footer>
+
     <script src="/js/start.js"></script>
   </body>
 </html>
