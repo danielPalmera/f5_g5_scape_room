@@ -38,7 +38,12 @@ function hideShowMessage(id) {
     document.getElementById("message-3").classList.add("animate-zoom");
   }
 }
-
+const fondoMusical = new Audio("../assets/sound/victory.mp3")
+fondoMusical.currentTime = 0
+fondoMusical.volume=0.3
+fondoMusical.play().catch(error => {
+    console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
+});
 
 /**
  * Event listeners
@@ -50,4 +55,4 @@ document.getElementById("btn_1").addEventListener("click", () => {
 /**
  * Volumen del audio
  */
-document.getElementById("bg-audio").volume = 0.1;
+

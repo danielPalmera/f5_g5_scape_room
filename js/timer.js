@@ -1,24 +1,17 @@
-/**
- * TEMPORIZADOR COMPARTIDO
- * Persiste el tiempo restante en sessionStorage entre room1, room2 y room3.
- * Llama a window.prisa() al llegar a 20s y a window.fin() al llegar a 0s.
- */
-
 const TIEMPO_INICIAL = 120;
 const CLAVE_STORAGE = "tiempoRestante";
-const BASE_FONT_SIZE = 32; // px (equivalente a ~1.4rem)
+const BASE_FONT_SIZE = 32;
 
 const timerDisplay = document.getElementById("timer-display");
 const ticktack = new Audio("../assets/sound/clock.mp3");
 const fondoMusical = new Audio("../assets/sound/dungeon_out.ogg");
 ticktack.loop = true;
         fondoMusical.currentTime = 0
-        fondoMusical.volume=.5
-        // Reproducimos
+        fondoMusical.volume=.3
         fondoMusical.play().catch(error => {
             console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
         });
-// Recuperar tiempo de sessionStorage o iniciar desde 60
+
 let tiempoRestante = parseInt(sessionStorage.getItem(CLAVE_STORAGE) ?? TIEMPO_INICIAL, 10);
 
 let prisaLlamada = tiempoRestante <= 20; // no volver a llamar si ya pasó
@@ -42,7 +35,6 @@ function hurryUp(){
   ticktack.play().catch(error => {
       console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
   });
-    // el tamaño ya se gestiona dinámicamente en actualizarDisplay
 }
 function end(){
    window.location.href = "failure.html";
@@ -50,7 +42,6 @@ function end(){
 
 actualizarDisplay();
 
-// Restaurar estado de audio si ya se cruzaron los umbrales en salas anteriores
 if (tiempoRestante <= 20) {
   ticktack.play().catch(error => {
     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
@@ -58,6 +49,7 @@ if (tiempoRestante <= 20) {
 }
 if (tiempoRestante <= 10) {
   ticktack.playbackRate = 1.5;
+  ticktack.volume=1.5
 }
 
 const intervalo = setInterval(() => {
