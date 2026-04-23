@@ -4,9 +4,9 @@
  * Llama a window.prisa() al llegar a 20s y a window.fin() al llegar a 0s.
  */
 
-const TIEMPO_INICIAL = 30;
+const TIEMPO_INICIAL = 120;
 const CLAVE_STORAGE = "tiempoRestante";
-const BASE_FONT_SIZE = 40; // px (equivalente a ~1.4rem)
+const BASE_FONT_SIZE = 32; // px (equivalente a ~1.4rem)
 
 const timerDisplay = document.getElementById("timer-display");
 const ticktack = new Audio("../assets/sound/clock.mp3");
@@ -28,7 +28,7 @@ function actualizarDisplay() {
   timerDisplay.textContent = tiempoRestante + "s";
 
   const porcentajeTranscurrido = (TIEMPO_INICIAL - tiempoRestante) / TIEMPO_INICIAL;
-  timerDisplay.style.fontSize = (BASE_FONT_SIZE * (4     + porcentajeTranscurrido)) + "px";
+  timerDisplay.style.fontSize = (BASE_FONT_SIZE * (2     + porcentajeTranscurrido)) + "px";
 
   if (tiempoRestante <= 20) {
     timerDisplay.classList.add("timer-prisa");
